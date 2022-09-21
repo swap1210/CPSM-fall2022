@@ -34,7 +34,7 @@ void *loop1(void *vptr)
 // function print from A to Z
 void *loop2(void *vptr)
 {
-    for (int i = 65; i <= (65 + 25); i++)
+    for (int i = 'A'; i <= 'Z'; i++)
     {
         printf("Thread %d: %c\n", pthread_self(), i);
     }
@@ -43,7 +43,7 @@ void *loop2(void *vptr)
 // function print from a to z
 void *loop3(void *vptr)
 {
-    for (int i = 97; i <= (97 + 25); i++)
+    for (int i = 'a'; i <= 'z'; i++)
     {
         printf("Thread %d: %c\n", pthread_self(), i);
     }

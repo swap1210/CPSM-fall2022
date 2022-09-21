@@ -12,6 +12,7 @@ int main()
     pid1 = fork();
     pid2 = fork();
 
+    printf("Hello I ran\n");
     // first child1 created by Parent fork(pid1)
     for (int i = 1; i < 100 && (pid1 == 0 && pid2 != 0); i = i + 2)
         printf("C1: %d\n", i);
@@ -30,4 +31,7 @@ int main()
         /* When the child is ended, then the parent will continue to execute its code */
         printf("Childrens Complete.\n");
     }
+
+    // all processes die here
+    exit(0);
 }

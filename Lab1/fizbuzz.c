@@ -1,28 +1,29 @@
 #include <stdio.h>
+#include <stdlib.h>
+
+// functional approach
+void fizzbuzzCheck(int num)
+{
+    // number divisible by 3, print 'Fizz'
+    if ((num % 3) == 0)
+        printf("Fizz");
+
+    // number divisible by 5, print 'Buzz'
+    if ((num % 5) == 0)
+        printf("Buzz");
+
+    // print the number
+    if (((num % 3) != 0 && (num % 5) != 0))
+        printf("%d", num);
+    printf("\n");
+}
 
 int main(void)
 {
     int i;
     for (i = 1; i <= 21; i++)
     {
-        // number divisible by 3 and 5 will
-        // always be divisible by 15, print
-        // 'FizzBuzz' in place of the number
-        if (i % 15 == 0)
-            printf("FizzBuzz\t");
-
-        // number divisible by 3? print 'Fizz'
-        // in place of the number
-        else if ((i % 3) == 0)
-            printf("Fizz\t");
-
-        // number divisible by 5, print 'Buzz'
-        // in place of the number
-        else if ((i % 5) == 0)
-            printf("Buzz\t");
-
-        else // print the number
-            printf("%d\t", i);
+        fizzbuzzCheck(i);
     }
 
     return 0;
